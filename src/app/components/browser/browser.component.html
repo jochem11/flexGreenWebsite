@@ -1,0 +1,31 @@
+<div class="mainveld p-4">
+  <div class="d-flex border-bottom pb-2">
+    <div class="blok shadow-sm mx-3 w-25 p-4 d-flex" (click)="showP1()"><p class="m-0">P1 meter</p></div>
+    <div class="blok shadow-sm mx-3 w-25 p-4 d-flex" (click)="showPulse()"><p class="m-0">Pulse meter</p></div>
+    <div class="blok shadow-sm mx-3 w-25 p-4 d-flex" (click)="showTemp()"><p class="m-0">Temperatuur</p></div>
+    <div class="blok shadow-sm mx-3 w-25 p-4 d-flex" (click)="showRelay()"><p class="m-0">Relay</p></div>
+    <div class="blok shadow-sm mx-3 w-25 p-4 d-flex" (click)="showMbus()"><p class="m-0">M-bus</p></div>
+    <div class="blok shadow-sm mx-3 w-25 p-4 d-flex" (click)="showModbus()"><p class="m-0">Modbus</p></div>
+  </div>
+  <div class="d-flex fill justify-content-center align-items-center w-100 flex-wrap" *ngIf="p1">
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('6', 'mark thuis', 'P1')"><p class="m-0"> mark thuis</p></div>
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('3', 'stefan', 'P1')"><p class="m-0"> stefan</p></div>
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('2', 'p1 receptie', 'P1')"><p class="m-0"> p1 receptie</p></div>
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('5', 'esp Suzanne', 'P1')"><p class="m-0"> esp Suzanne</p></div>
+  </div>
+  <div class="d-flex fill justify-content-center align-items-center w-100 flex-wrap" *ngIf="pulse">
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('0', 'Demo pulse', 'Pulse')"><p class="m-0">Demo Pulse</p></div>
+  </div>
+  <div class="d-flex fill justify-content-center align-items-center w-100 flex-wrap" *ngIf="temp">
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('0', 'Demo temp', 'Temp')"><p class="m-0"> Demo temp</p></div>
+  </div>
+  <div class=" d-flex fill justify-content-center align-items-center w-100 flex-wrap" *ngIf="Relay">
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('0', 'Demo relay', 'Relay')"><p class="m-0">Demo relay</p></div>
+  </div>
+  <div class="d-flex fill justify-content-center align-items-center w-100 flex-wrap" *ngIf="mBus">
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('0', 'Demo m-bus', 'Mbus')"><p class="m-0">Demo m-bus</p></div>
+  </div>
+  <div class="d-flex fill justify-content-center align-items-center w-100 flex-wrap" *ngIf="modbus">
+    <div class="blok shadow m-3 w-25 p-4 d-flex" (click)="updateVars('0', 'Demo modbus', 'Modbus')"><p class="m-0">Demo modbus</p></div>
+  </div>
+</div>

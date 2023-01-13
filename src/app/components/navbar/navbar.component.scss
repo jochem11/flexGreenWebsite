@@ -1,0 +1,58 @@
+.navbar {
+  height: 120px;
+  background-color: #E0E0E0;
+  img {
+    width: auto;
+    height: auto;
+    max-height: 90px;
+
+  }
+  .account {
+    font-size: x-large;
+    img {
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+  }
+  .bedrijfsnaam {
+    font-size: x-large;
+    display: contents;
+  }
+  svg {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .navbar {
+    .account {
+      font-size: 20px;
+    }
+    .bedrijfsnaam {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .navbar {
+    .account {
+      font-size: 14px;
+    }
+    .bedrijfsnaam {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .navbar {
+    .account {
+      font-size: 12px;
+    }
+    .bedrijfsnaam {
+      font-size: 12px;
+    }
+  }
+}

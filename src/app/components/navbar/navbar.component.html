@@ -1,0 +1,11 @@
+<div class="navbar container-fluid">
+  <div class="col-4 col-sm-3 h-100 d-flex align-items-center">
+    <img class="img-fluid" src="/assets/images/flexGreenLogo.png" alt="logo">
+  </div>
+  <div class="bedrijfsnaam col-5 col-sm-6 " *ngIf="globalvars.title != undefined">{{globalvars.title}}</div>
+  <div class="bedrijfsnaam col-5 col-sm-6 " *ngIf="globalvars.title == undefined">FlexGreen</div>
+  <div class="account col-3 col-sm-4 d-flex align-items-center justify-content-end">
+    <img src="./assets/images/profile.avif" alt="profile picture" class="img-fluid d-none d-md-block">
+    <a routerLink="/account" >Account Name</a>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<mat-tab-group dynamicHeight [selectedIndex]="0">
+  <mat-tab label="Manual">
+      <div class="card mx-auto mt-3 shadow">
+        <div class="card-body">
+          <div class="header d-flex align-items-center justify-content-center">
+            <p class="m-0">Relay</p>
+          </div>
+          <div class="body mt-2">
+            <div>
+              <h4>tekst1</h4>
+              <mat-slide-toggle color="primary" #darkModeSwitch1></mat-slide-toggle>
+            </div>
+            <div>
+              <h4>tekst2</h4>
+              <mat-slide-toggle color="primary" #darkModeSwitch2></mat-slide-toggle>
+            </div>
+            <div>
+              <h4>tekst3</h4>
+              <mat-slide-toggle color="primary" #darkModeSwitch3></mat-slide-toggle>
+            </div>
+            <div>
+              <h4>tekst4</h4>
+              <mat-slide-toggle color="primary" #darkModeSwitch4></mat-slide-toggle>
+            </div>
+            <div>
+              <h4>tekst5</h4>
+              <mat-slide-toggle color="primary" #darkModeSwitch5></mat-slide-toggle>
+            </div>
+            <div>
+              <h4>tekst6</h4>
+              <mat-slide-toggle color="primary" #darkModeSwitch6></mat-slide-toggle>
+            </div>
+            <div>
+              <h4>tekst7</h4>
+              <mat-slide-toggle color="primary" #darkModeSwitch7></mat-slide-toggle>
+            </div>
+            <div>
+              <h4>tekst8</h4>
+              <mat-slide-toggle color="primary" #darkModeSwitch8></mat-slide-toggle>
+            </div>
+          </div>
+          <h4 class="mt-3 d-flex align-items-center justify-content-center">All relays</h4>
+          <div class="d-flex align-items-center justify-content-center">
+            <button class="button button1">On</button>
+            <button class="button button2">Off</button>
+          </div>
+        </div>
+      </div>
+  </mat-tab>
+  <mat-tab label="Settings">
+    <div class="w-100 border-bottom title">Change Names</div>
+    <form>
+      <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Name 1" name="name" id='name' required />
+        <label for="name" class="form__label">Name 1</label>
+      </div>
+      <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Name 2" name="name" id='name' required />
+        <label for="name" class="form__label">Name 2</label>
+      </div>
+      <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Name 3" name="name" id='name' required />
+        <label for="name" class="form__label">Name 3</label>
+      </div>
+      <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Name 4" name="name" id='name' required />
+        <label for="name" class="form__label">Name 4</label>
+      </div>
+      <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Name 5" name="name" id='name' required />
+        <label for="name" class="form__label">Name 5</label>
+      </div>
+      <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Name 6" name="name" id='name' required />
+        <label for="name" class="form__label">Name 6</label>
+      </div>
+      <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Name 7" name="name" id='name' required />
+        <label for="name" class="form__label">Name 7</label>
+      </div>
+      <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Name 8" name="name" id='name' required />
+        <label for="name" class="form__label">Name 8</label>
+      </div>
+      <button class="submit mt-3" type="submit">Save</button>
+    </form>
+  </mat-tab>
+</mat-tab-group>

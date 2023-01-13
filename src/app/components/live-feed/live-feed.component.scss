@@ -1,0 +1,27 @@
+
+
+
+.card {
+    width: 50%;
+    min-width: fit-content;
+    background-color: #39b54a;
+    border-radius: 10px !important;
+    font-size: 22px;
+    font-weight: 450;
+    color: white;
+    .body {
+        .is {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .bruin {
+            color: #9b3535;
+        }
+        .paars {
+            color: #7b0074;
+        }
+        .rood {
+            color: #FF0908;
+        }
+    }
+}

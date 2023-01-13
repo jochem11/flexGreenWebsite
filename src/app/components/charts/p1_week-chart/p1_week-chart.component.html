@@ -1,0 +1,27 @@
+<div class="container-fluid grafiek-container h-100" *ngIf="dataReady">
+  <mat-form-field appearance="outline" class="position-absolute" color="primary">
+    <mat-date-range-input
+      color="primary"
+      [formGroup]="pickerForm"
+      [rangePicker]="picker"
+      [comparisonStart]="pickerForm.value.start"
+      [comparisonEnd]="pickerForm.value.end"
+      [max]="max_input"
+      (click)="picker.open()">
+      <input matStartDate placeholder="Start date" (dateChange)="dateChange($event)" formControlName="start" color="primary">
+      <input matEndDate placeholder="End date" formControlName="end" color="primary">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matIconSuffix [for]="picker" color="primary"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker color="primary"></mat-date-range-picker>
+  </mat-form-field>
+  <canvas
+    #baseChart
+    baseChart
+    class="h-100"
+    [data]="data"
+    [type]="'bar'"
+    [options]="chartOptions"
+    [legend]="barChartLegend"
+  >
+  </canvas>
+</div>

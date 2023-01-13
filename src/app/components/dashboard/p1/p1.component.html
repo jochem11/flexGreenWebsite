@@ -1,0 +1,27 @@
+<mat-tab-group dynamicHeight [selectedIndex]="1">
+  <mat-tab label="Live feed">
+    <ng-template matTabContent>
+      <app-live-feed></app-live-feed>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Day">
+    <ng-template matTabContent>
+      <app-p1_day-chart></app-p1_day-chart>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Week">
+    <ng-template matTabContent>
+      <app-p1_week-chart></app-p1_week-chart>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Month">
+    <ng-template matTabContent>
+      grafiek3
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Year">
+    <ng-template matTabContent>
+      grafiek4
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

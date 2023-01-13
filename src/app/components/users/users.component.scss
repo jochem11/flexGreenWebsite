@@ -1,0 +1,165 @@
+.subnav {
+    height: 80px;
+    p {
+        font-size: 40px;
+    }
+    .buttons {
+        .btn {
+            height: 50%;
+            width: 100px;
+            background-color: #39b54a69;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover {
+                background-color: #39b54a9a;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    .dropdown-menu {
+        left: -34px !important;
+        border-radius: 10px;
+        width: max-content;
+        input[type='text'],
+        select {
+            width: 100%;
+        }
+        button {
+            width: 100%;
+            border-radius:6px;
+            background-color: #39b54a69;
+            border-width: 1px;
+            &:hover {
+                background-color: #39b54a9a;
+            }
+        }
+    }
+}
+
+.editgroup {
+    cursor: pointer;
+}
+
+.user {
+    height: 70px;
+    min-width: 300px;
+    width: auto;
+    border-radius: 7px;
+    background-color: #f7f7f7;
+    p {
+        font-size: 25px;
+    }
+    img {
+        height: 90%;
+        border-radius: 50%;
+    }
+}
+
+.edit {
+    cursor: pointer;
+    height: 100%;
+    svg {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+.fix {
+    margin-top: 8px;
+}
+
+.overlay {
+    bottom: 0;
+    height:calc(100vh - 120px);
+    width: calc(100vw - 300px);
+    border-top-left-radius: 30px;
+    border-left: 1px solid #39b54a8a;
+    margin-left: -25px;
+    margin-top:1px;
+    background-color: rgba(161, 161, 161, 0.4);
+    svg {
+        float: right;
+        cursor: pointer;
+        right: 0;
+        &:hover {
+            color: red;
+        }
+    }
+    ul {
+        height: 180px;
+        overflow: auto;
+    }
+    .userscontainer {
+        height: 250px;
+    }
+    .Fright {
+        float: right;
+    }
+    .changeAcc {
+        height: fit-content;
+        width: fit-content;
+        border-radius: 15px;
+        button {
+            border-radius: 10px;
+            border: none;
+        }
+        svg {
+            right: 0;
+            cursor: pointer;
+            &:hover {
+                color: red;
+            }
+        }
+        .information {
+            font-size: 20px;
+            border-bottom: 1px solid grey;
+            img {
+                height: 300px;
+                width: 300px;
+                border-radius: 50%
+            }
+            .values {
+                width: 100%;
+                input {
+                    border: none;
+                    height: fit-content;
+                    width: 90%;
+                    border-radius: 7px;
+                    display: block;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                button {
+                    border-radius: 10px;
+                    background-color: #39b54a69;
+                    border: none;
+                    margin-left: auto;
+                    &:hover {
+                        background-color: #39b54a9a;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .active {
+                    border: 1px solid gray;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .overlay {
+        width: calc(100vw - 120px);
+        
+    }
+}
+::ng-deep.changeGroup {
+    .mat-tab-link, .mat-tab-label, .mat-tab-label-active{
+        min-width: 50% !important;
+    }
+}

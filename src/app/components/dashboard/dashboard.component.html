@@ -1,0 +1,8 @@
+<div class="container-fluid mainveld p-4">
+  <app-p1 *ngIf="globalvars.type == 'P1'"></app-p1>
+  <app-relay *ngIf="globalvars.type == 'Relay'"></app-relay>
+  <app-m-bus *ngIf="globalvars.type == 'Mbus'"></app-m-bus>
+  <app-modbus *ngIf="globalvars.type == 'Modbus'"></app-modbus>
+  <app-pulse *ngIf="globalvars.type == 'Pulse'"></app-pulse>
+  <app-temp *ngIf="globalvars.type == 'Temp'"></app-temp>
+</div>

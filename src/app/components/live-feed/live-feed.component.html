@@ -1,0 +1,109 @@
+<div class="card mx-auto mt-3">
+  <div class="card-body">
+    <div class="header d-flex align-items-center justify-content-center">
+      <p class="m-0">P1</p>
+    </div>
+    <div class="body mt-2">
+      <table class="mx-auto" *ngIf="dataReady">
+        <tbody>
+        <tr class="bruin">
+          <td>Verbruik normaal tarief</td>
+          <td class="px-3">=</td>
+          <td>{{verbruikNormaal}}</td>
+          <td class="pl-3">kWh</td>
+        </tr>
+        <tr class="bruin">
+          <td class="pb-3">Verbruik dal tarief</td>
+          <td class="px-3 pb-3">=</td>
+          <td class="pb-3">{{verbruikDal}}</td>
+          <td class="pl-3 pb-3">kWh</td>
+        </tr>
+        <tr>
+          <td>Terug normaal tarief</td>
+          <td class="px-3">=</td>
+          <td>{{terugNormaal}}</td>
+          <td class="pl-3">kWh</td>
+        </tr>
+        <tr>
+          <td class="pb-3">Terug dal tarief</td>
+          <td class="px-3 pb-3">=</td>
+          <td class="pb-3">{{terugDal}}</td>
+          <td class="pl-3 pb-3">kWh</td>
+        </tr>
+        <tr class="bruin">
+          <td>Actueel verbruik</td>
+          <td class="px-3">=</td>
+          <td>{{actueelVerbruik}}</td>
+          <td class="pl-3">W</td>
+        </tr>
+        <tr>
+          <td class="pb-3">Actueel teruglevering</td>
+          <td class="px-3 pb-3">=</td>
+          <td class="pb-3">{{actueelTerug}}</td>
+          <td class="pl-3 pb-3">W</td>
+        </tr>
+        <tr class="bruin">
+          <td>Verbruik fase 1</td>
+          <td class="px-3">=</td>
+          <td>{{verbruikF1}}</td>
+          <td class="pl-3">W</td>
+        </tr>
+        <tr class="bruin">
+          <td>Verbruik fase 2</td>
+          <td class="px-3">=</td>
+          <td>{{verbruikF2}}</td>
+          <td class="pl-3">W</td>
+        </tr>
+        <tr class="bruin">
+          <td class="pb-3">Verbruik fase 3</td>
+          <td class="px-3 pb-3">=</td>
+          <td class="pb-3">{{verbruikF3}}</td>
+          <td class="pl-3 pb-3">W</td>
+        </tr>
+        <tr>
+          <td>Teruglevering fase 1</td>
+          <td class="px-3">=</td>
+          <td>{{terugF1}}</td>
+          <td class="pl-3">W</td>
+        </tr>
+        <tr>
+          <td>Teruglevering fase 2</td>
+          <td class="px-3">=</td>
+          <td>{{terugF2}}</td>
+          <td class="pl-3">W</td>
+        </tr>
+        <tr>
+          <td class="pb-3">Teruglevering fase 3</td>
+          <td class="px-3 pb-3">=</td>
+          <td class="pb-3">{{terugF3}}</td>
+          <td class="pl-3 pb-3">W</td>
+        </tr>
+        <tr class="paars">
+          <td>Stroom fase 1</td>
+          <td class="px-3">=</td>
+          <td>{{stroomF1}}</td>
+          <td class="pl-3">A</td>
+        </tr>
+        <tr class="paars">
+          <td>Stroom fase 2</td>
+          <td class="px-3">=</td>
+          <td>{{stroomF2}}</td>
+          <td class="pl-3">A</td>
+        </tr>
+        <tr class="paars">
+          <td class="pb-3">Stroom fase 3</td>
+          <td class="px-3 pb-3">=</td>
+          <td class="pb-3">{{stroomF3}}</td>
+          <td class="pl-3 pb-3">A</td>
+        </tr>
+        <tr class="rood">
+          <td>Gas</td>
+          <td class="px-3">=</td>
+          <td>{{gas}}</td>
+          <td class="pl-3">m³</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

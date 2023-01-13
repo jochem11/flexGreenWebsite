@@ -1,0 +1,139 @@
+mat-slide-toggle {
+  transform: scale(3);
+}
+
+.card {
+  width: 50%;
+  min-width: fit-content;
+  background-color: #39b54a;
+  border-radius: 10px !important;
+  font-size: 22px;
+  font-weight: 450;
+  color: white;
+  .button {
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    min-width: 140px;
+  }
+  .button1 {
+    background-color: #008CBA;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    &:hover {
+      background-color: #007195;
+    }
+  }
+  .button2 {
+    background-color: #f44336;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    &:hover {
+      background-color: #c2362b;
+    }
+  }
+  .body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    div {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
+
+::ng-deep.mat-mdc-slide-toggle .mdc-switch .mdc-switch__ripple {
+  height: auto !important;
+  width: auto !important;
+}
+
+.title {
+  font-size: 1.3rem;
+}
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 30%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid black;
+  outline: 0;
+  font-size: 1.3rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: black;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight:700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+ .submit {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 8.5rem;
+   padding: 0.5rem 1rem;
+   background-color: #39b54a;
+   border: none;
+   border-radius: 0.3125rem;
+   box-shadow: 0 12px 24px 0 rgb(0 0 0 / 20%);
+   cursor: pointer;
+   color: white;
+   &:hover {
+     background-color: #2a8837;
+   }
+ }

@@ -1,0 +1,21 @@
+<div class="container-fluid grafiek-container h-100">
+  <form [formGroup]="myGroup">
+    <mat-form-field appearance="outline" class="position-absolute">
+      <input matInput [formControl]="date"
+             [matDatepicker]="releasedAtPicker" (click)="releasedAtPicker.open()"
+             (dateChange)="changeDate($event)" [max]='today'>
+      <mat-datepicker-toggle matSuffix [for]="releasedAtPicker"></mat-datepicker-toggle>
+      <mat-datepicker #releasedAtPicker></mat-datepicker>
+    </mat-form-field>
+  </form>
+  <canvas
+    #baseChart
+    baseChart
+    class="h-100"
+    [data]="data"
+    [type]="'line'"
+    [options]="chartOptions"
+    [legend]="barChartLegend"
+  >
+  </canvas>
+</div>

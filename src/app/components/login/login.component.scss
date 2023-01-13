@@ -1,0 +1,124 @@
+.flipcontainer {
+  position: relative;
+  height: 750px;
+  width: 500px;
+  margin: 0 auto;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+  .flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+  }
+  .front {
+  }
+  .back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+  }
+  .disable {
+    pointer-events: none;
+  }
+  .kaart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    .item {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .login {
+      width: 500px;
+      min-height: 100px;
+      height: 100%;
+      background-color: white;
+      border-radius: 12.5px;
+      img {
+        width: 50%;
+      }
+      p {
+        width: fit-content;
+        font-size: 25px;
+      }
+      .t2 {
+        font-size: 17px;
+        opacity: 0.7;
+      }
+      .input-group {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+        input[type='text'],
+        input[type='password'] {
+          padding: 13px 20px;
+          padding-left: 55px;
+          height: 48px;
+          width: 100%;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: 0.5px;
+          outline: none;
+          color: black;
+          background-color: #ebebeb;
+          border: none;
+          box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+          &:focus {
+            border: none;
+            outline: none;
+            box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+          }
+        }
+        svg {
+          position: absolute;
+          top: 0;
+          left: 18px;
+          height: 48px;
+          font-size: 24px;
+          line-height: 48px;
+          text-align: left;
+          color: black;
+        }
+      }
+      .fPw {
+        font-size: 17px;
+        cursor: pointer;
+        color: #39b54a91;
+        &:hover {
+          color: #35ac45;
+          text-decoration: underline;
+        }
+      }
+      button {
+        background-color: #39b54a69;
+      }
+      .nAcc {
+        font-size: 17px;
+      }
+    }
+  }
+}

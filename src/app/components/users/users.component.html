@@ -1,0 +1,261 @@
+<div class="container-fluid mainveld p-4">
+    <div class="subnav container-fluid d-flex p-0">
+        <p class="my-auto col-5">Users</p>
+        <div class="buttons d-flex justify-content-end col-7">
+            <div class="btn mx-4 shadow d-flex align-items-center" (click)="new_groupUser()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+                <p class="my-auto mx-2">Add</p>
+            </div>
+            <div class="btn shadow d-flex" id="navdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                    <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <p class="my-auto mx-2">Filter</p>
+            </div>
+            <div class="dropdown-menu shadow mt-2 p-2" aria-labelledby="navdropdown" (click)="$event.stopPropagation()">
+                <form>
+                    <div class="row">
+                        <div class="col-4">Name:</div>
+                        <div class="col-8">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-4">Order by:</div>
+                        <div class="col-8">
+                            <select name="" id="">
+                                <option value="0">-</option>
+                                <option value="1">A-Z</option>
+                                <option value="2">Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">Groups:</div>
+                    </div>
+                    <ul class="col-12 list-unstyled">
+                        <li>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                <label class="custom-control-label" for="customSwitch1">Owner</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+                                <label class="custom-control-label" for="customSwitch2">Admin</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                                <label class="custom-control-label" for="customSwitch3">Only View</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch4" checked>
+                                <label class="custom-control-label" for="customSwitch4">only View</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch5" checked>
+                                <label class="custom-control-label" for="customSwitch5">Unasigned</label>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-12">
+                            <button (click)="$event.preventDefault()" type="submit">Filter</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" *ngFor="let group of groups">
+        <div class="h4 d-flex">
+            {{group.groupname}}
+            <div class="edit fix d-flex">
+                <svg class="editgroup" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16" (click)="editGroup(group.groupname)">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="users container-fluid d-flex flex-wrap p-3">
+            <div *ngFor="let user of group.users">
+                <div id="user" class="user d-flex align-items-center mx-3 shadow mb-3">
+                    <img class="mt-2 mb-2 ml-2" src="./assets/images/profile.avif" alt="profile picture">
+                    <p class="mb-0 ml-2 mr-3">{{user.name}}</p>
+                    <div class="edit ml-auto d-flex align-items-center" (click)="EditUser(user.id)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-fixed overlay p-4 align-items-center justify-content-center" [ngStyle]="{'display' : showEdit ? 'flex' : 'none'}" (click)="hideOverlay()">
+        <div (click)="$event.stopPropagation();" class="changeAcc container bg-light p-3 pb-5 position-relative">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x position-absolute mr-3" viewBox="0 0 16 16" (click)="hideOverlay()">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            <div class="information d-flex flex-column">
+                <img src="./assets/images/profile.avif" alt="profile picture" class="p-3 img-fluid mx-auto mb-2">
+                <div class="values ml-3 d-flex flex-column w-100">
+                    <div class="row w-100">
+                        <p class="col-4">ID:</p>
+                        <input [ngClass]="readonly1 ? '' : 'active'" class="col-4 bg-light" type="text" name="" id="" value="{{userid}}" [readonly]="readonly1">
+                        <button (click)="readonly(1)" class="col-3 h-75 shadow">Edit</button>
+                    </div>
+                    <div class="row mt-2 w-100">
+                        <p class="col-4">Name:</p>
+                        <input [ngClass]="readonly2 ? '' : 'active'" class="col-4 bg-light" type="text" name="" id="" value="{{name}}" [readonly]="readonly2">
+                        <button (click)="readonly(2)" class="col-3 h-75 shadow">Edit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 px-3">
+                <button class="col-4 btn-danger">delete</button>
+                <div class="col-4"></div>
+                <button class="col-4 btn-success">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="position-fixed overlay p-4 align-items-center justify-content-center" [ngStyle]="{'display' : showEditGroup ? 'flex' : 'none'}" (click)="hideOverlay1()">
+        <div class="changeGroup rounded bg-light container p-3 position-relative" (click)="$event.stopPropagation();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x position-absolute mr-3" viewBox="0 0 16 16" (click)="hideOverlayGroup()">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            <div class="d-flex justify-content-center mb-4">
+                <h2>Groupname</h2>
+            </div>
+            <div class="row w-100">
+                <div class="col-6 border-right">
+                    <div class="d-flex justify-content-center flex-column">
+                        <h3 class="w-auto mx-auto">Current users</h3>
+                        <div class="container rounded p-0 overflow-auto userscontainer">
+                            <div *ngFor="let user of users">
+                                <div id="user" class="user d-flex align-items-center shadow">
+                                    <img class="mt-2 mb-2 ml-2" src="./assets/images/profile.avif" alt="profile picture">
+                                    <p class="mb-0 ml-2 mr-3">user</p>
+                                    <div class="edit ml-auto d-flex align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex justify-content-center flex-column">
+                        <h3 class="w-auto mx-auto">Add users</h3>
+                        <div class="container rounded p-0 overflow-auto userscontainer">
+                            <div *ngFor="let user of users">
+                                <div id="user" class="user d-flex align-items-center shadow">
+                                    <img class="mt-2 mb-2 ml-2" src="./assets/images/profile.avif" alt="profile picture">
+                                    <p class="mb-0 ml-2 mr-3">user</p>
+                                    <div class="edit ml-auto d-flex align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 w-100">
+                <div class="col-6 border-right">
+                    <div class="d-flex justify-content-center flex-column">
+                        <h3 class="w-auto mx-auto">Current rights</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Edit
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                </svg>
+                            </li>
+                            <li class="list-group-item">
+                                Read
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                </svg>
+                            </li>
+                            <li class="list-group-item">
+                                Delete
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                </svg>
+                            </li>
+                            <li class="list-group-item">
+                                etc...
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex justify-content-center flex-column">
+                        <h3 class="w-auto mx-auto">Add rights</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Edit
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </li>
+                            <li class="list-group-item">
+                                Read
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </li>
+                            <li class="list-group-item">
+                                Delete
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </li>
+                            <li class="list-group-item">
+                                etc...
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row w-100 mt-3">
+                <div class="col-12">
+                    <button class="btn btn-danger">Delete Group</button>
+                    <button class="btn btn-success Fright">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-fixed overlay p-4 align-items-center justify-content-center" [ngStyle]="{'display' : new_group_user ? 'flex' : 'none'}" (click)="hideOverlay2()">
+        <div class="changeGroup rounded bg-light container p-3 position-relative" (click)="$event.stopPropagation();">
+            <mat-tab-group>
+              <mat-tab label="Create User" >
+                  View1
+              </mat-tab>
+              <mat-tab label="Create Group">
+                  View2
+                  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="done"></mat-icon>
+              </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

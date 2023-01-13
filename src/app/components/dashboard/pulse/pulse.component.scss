@@ -1,0 +1,15 @@
+.card {
+  width: 50%;
+  min-width: fit-content;
+  background-color: #39b54a;
+  border-radius: 10px !important;
+  font-size: 22px;
+  font-weight: 450;
+  color: white;
+  height: 90%;
+  .body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
